@@ -44,14 +44,14 @@ function buildCityCard(cityObj){
     let cityName = document.createElement('h1');
     cityName.className = 'card-title';
     cityName.innerHTML = cityObj.name;
-
+    
     let weatherCondition = document.createElement('h6')
     weatherCondition.className = 'card-subtitle text-muted my-2';
-    weatherCondition.innerHTML = cityObj.weather[0].description;
+    weatherCondition.innerHTML = `~ ${cityObj.weather[0].description} ~`;
 
     let currentTemp = document.createElement('h5');
     currentTemp.style = 'color: green'
-    currentTemp.className = 'card-text';
+    currentTemp.className = 'card-text fw-bold';
     currentTemp.innerHTML = `Current Temp: ${cityObj.main.temp}℉`
 
     let windSpeed = document.createElement('h5');
